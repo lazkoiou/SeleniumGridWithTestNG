@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Maven Suite" parallel="tests" thread-count="2">
+    <test name="Grid Test With Serial Execution in FIREFOX">
+<!--        <packages>-->
+<!--            <package name="com.grid.tests"/>-->
+<!--        </packages>-->
+        <parameter name="browserType" value="firefox"/>
+        <classes>
+            <class name="com.grid.tests.GridExample"/>
+        </classes>
+    </test>
+    <test name="Grid Test With Serial Execution in CHROME">
+        <!--        <packages>-->
+        <!--            <package name="com.grid.tests"/>-->
+        <!--        </packages>-->
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="com.grid.tests.GridExample"/>
+        </classes>
+    </test>
+
+</suite>
